@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LLM App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1>Welcome to the LLM Application</h1>
+    <div class="feature-buttons">
+        <a href="/chat">Chat Session</a>
+        <form action="/feature/summarize" method="POST">
+            <input type="text" name="prompt" placeholder="Enter text to summarize">
+            <button type="submit">Summarize</button>
+        </form>
+        <form action="/feature/sentiment" method="POST">
+            <input type="text" name="prompt" placeholder="Enter text for sentiment analysis">
+            <button type="submit">Analyze Sentiment</button>
+        </form>
+        <form action="/feature/generate_code" method="POST">
+            <input type="text" name="prompt" placeholder="Describe the code you need">
+            <button type="submit">Generate Code</button>
+        </form>
+    </div>
+</body>
+</html>
